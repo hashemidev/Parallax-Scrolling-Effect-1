@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parallax scrolling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="zoom">
+        <h1 id="h1-1">Parallax Scrolling</h1>
+        <img src="./text.png" id="text1">
+    </section>
+
+    <section class="content">
+        <h1>Parallax Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo est facere repellat laudantium cumque quis molestias vero consequatur, ea obcaecati ipsam dolorum possimus harum natus numquam expedita magnam quo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, debitis necessitatibus suscipit provident distinctio enim cupiditate laudantium corrupti velit voluptates numquam neque nesciunt quam repudiandae beatae excepturi sunt nihil amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur porro a cum id commodi reprehenderit veritatis corrupti quis suscipit et? Quidem facere debitis accusamus quibusdam voluptate sit quaerat delectus tempore.</p>
+    </section>
+
+    <section class="zoom">
+        <img src="./text.png" id="text2">
+        <h1 id="h1-2">Please Follow Hashemidev:)</h1>
+    </section>
+
+    <script>
+        var text1 = document.getElementById('text1');
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', 
+            function (e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                text1.style.top = -scroll/10 + '%';
+        });
+
+        var text2 = document.getElementById('text2');
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', 
+            function (e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                text2.style.top = -scroll/10 + '%';
+        });
+    </script>
+</body>
+</html>
